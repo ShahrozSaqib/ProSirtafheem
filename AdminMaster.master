@@ -1,0 +1,27 @@
+﻿
+<%@ Master Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminMaster" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+    <h2>Admin Controls & Settings</h2>
+<hr />
+<div  >
+<asp:Menu ID="AdminMenu" runat="server" Orientation="Horizontal" CssClass="menu" 
+        IncludeStyleBlock="False" StaticEnableDefaultPopOutImage="False">
+    <Items> 
+        <asp:MenuItem NavigateUrl="~/Admin/Admin.aspx" Text="Aproval"></asp:MenuItem> 
+        <asp:MenuItem NavigateUrl="" Text="Advance Settings">
+            <asp:MenuItem NavigateUrl="~/Admin/PropertyFormSettings.aspx" Text="Vechiles Form"></asp:MenuItem>
+            <asp:MenuItem NavigateUrl="~/Admin/VehicleFormSettings.aspx" Text="Property Form"></asp:MenuItem>
+        </asp:MenuItem>
+    </Items>
+</asp:Menu>
+
+</div>
+<asp:ContentPlaceHolder ID="AdminContentBody" runat="server">
+</asp:ContentPlaceHolder>
+    </asp:Content>
+
